@@ -6,7 +6,7 @@ import MenuBookIcon from "@mui/icons-material/MenuBook";
 const Header = () => {
   return (
     <AppBar>
-      <Container>
+      <Container maxWidth="lg">
         <Toolbar>
           <Typography component="h3" variant="h5" flex={1} fontWeight="600">
             وب دینو

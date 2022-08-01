@@ -6,11 +6,12 @@ import "./styles/font.css";
 import App from "./App";
 
 const client = new ApolloClient({
-  uri: process.env.REACT_APP_GRAPHQL_URI,
+  uri: process.env.REACT_APP_MY_GRAPHCMS_URI,
   cache: new InMemoryCache(),
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+console.log(process.env.REACT_APP_MY_GRAPHCMS_URI);
 root.render(
   <ApolloProvider client={client}>
     <App />
