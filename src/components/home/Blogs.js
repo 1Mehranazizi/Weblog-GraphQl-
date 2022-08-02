@@ -9,7 +9,6 @@ const Blogs = () => {
     if(loading) return <h3>Loading...</h3>
     if(error) return <h3>Error...</h3>
     const {posts} = data
-    console.log(posts);
     return (
         <Grid container spacing={3}>
             {posts.map(post => (
