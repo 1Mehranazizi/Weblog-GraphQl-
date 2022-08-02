@@ -16,16 +16,18 @@ const CardEl = ({ title, author, slug, coverPhoto }) => {
     <Card
       sx={{ boxShadow: "0 5px 15px rgba(112,112,112,0.2)", borderRadius: 4 }}
     >
-      <CardHeader
-        avatar={
-          <Avatar
-            src={author.avatar.url}
-            alt={author.name}
-            sx={{ marginLeft: 1 }}
-          />
-        }
-        title={author.name}
-      />
+      {author && (
+        <CardHeader
+          avatar={
+            <Avatar
+              src={author.avatar.url}
+              alt={author.name}
+              sx={{ marginLeft: 1 }}
+            />
+          }
+          title={author.name}
+        />
+      )}
       <CardMedia
         component="img"
         image={coverPhoto.url}
