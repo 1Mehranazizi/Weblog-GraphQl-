@@ -38,26 +38,49 @@ const GET_AUTHORS_INFO = gql`
 `;
 
 const GET_AUTHOR_INFO = gql`
-query getAuthorInfo($slug:String!) {
-  author(where: {slug: $slug}) {
-    avatar {
-      url
+  query getAuthorInfo($slug: String!) {
+    author(where: { slug: $slug }) {
+      avatar {
+        url
+      }
+      field
+      name
+      description {
+        html
+      }
+      posts {
+        coverPhoto {
+          url
+        }
+        id
+        slug
+        title
+      }
     }
-    field
-    name
-    description {
-      html
-    }
-    posts {
+  }
+`;
+
+const GET_BLOG_INFO = gql`
+  query getBlogInfo($slug: String!) {
+    post(where: { slug: $slug }) {
+      author {
+        ... on Author {
+          name
+          field
+          avatar {
+            url
+          }
+        }
+      }
+      content {
+        html
+      }
       coverPhoto {
         url
       }
-      id
-      slug
       title
     }
   }
-}
-`
+`;
 
-export { GET_BLOGS_INFO, GET_AUTHORS_INFO,GET_AUTHOR_INFO };
+export { GET_BLOGS_INFO, GET_AUTHORS_INFO, GET_AUTHOR_INFO, GET_BLOG_INFO };
