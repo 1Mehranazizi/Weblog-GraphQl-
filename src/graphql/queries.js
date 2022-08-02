@@ -79,6 +79,7 @@ const GET_BLOG_INFO = gql`
         url
       }
       title
+      slug
     }
   }
 `;
