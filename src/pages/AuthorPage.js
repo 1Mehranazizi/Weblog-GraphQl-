@@ -6,13 +6,14 @@ import { GET_AUTHOR_INFO } from "../graphql/queries";
 import { Container } from "@mui/system";
 import sanitizeHtml from "sanitize-html";
 import CardEl from "../components/shared/CardEl";
+import Loader from "../components/shared/Loader";
 
 const AuthorPage = () => {
   const { slug } = useParams();
   const { loading, data, error } = useQuery(GET_AUTHOR_INFO, {
     variables: { slug },
   });
-  if (loading) return <h3>Loading...</h3>;
+  if (loading) return <Loader />;
   if (error) return <h3>Error</h3>;
   console.log(data);
   const { author } = data;
