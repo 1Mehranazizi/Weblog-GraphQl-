@@ -9,6 +9,7 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const CardEl = ({ title, author, slug, coverPhoto }) => {
   return (
@@ -44,11 +45,16 @@ const CardEl = ({ title, author, slug, coverPhoto }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <a href={`/blogs/${slug}`} style={{ display: "block", width: "100%" }}>
-          <Button variant="contained" color="info" fullWidth sx={{borderRadius:5}}>
+        <Link to={`/blogs/${slug}`} style={{ display: "block", width: "100%" }}>
+          <Button
+            variant="contained"
+            color="info"
+            fullWidth
+            sx={{ borderRadius: 5 }}
+          >
             خواندن مقاله
           </Button>
-        </a>
+        </Link>
       </CardActions>
     </Card>
   );
