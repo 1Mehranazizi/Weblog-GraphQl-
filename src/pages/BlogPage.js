@@ -52,9 +52,9 @@ const BlogPage = () => {
           <Avatar
             src={post.author.avatar.url}
             alt={post.author.name}
-            sx={{ marginLeft: 1, width: 100, height: 100 }}
+            sx={{ width: 100, height: 100 }}
           />
-          <Box component="div">
+          <Box component="div" sx={{marginLeft: 2,}}>
             <Typography component="p" variant="p">
               {post.author.name}
             </Typography>
