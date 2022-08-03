@@ -11,6 +11,7 @@ import HomePage from "./pages/HomePage";
 import AuthorPage from "./pages/AuthorPage";
 import BlogPage from "./pages/BlogPage";
 import ScrollToTop from "./helper/ScrollToTop";
+import Footer from "./layouts/Footer";
 
 const cacheRtl = createCache({
   key: "muirtl",
@@ -28,6 +29,7 @@ function App() {
           <Route path="/authors/:slug" element={<AuthorPage />} />
           <Route path="/blogs/:slug" element={<BlogPage />} />
         </Routes>
+        <Footer />
       </ThemeProvider>
     </CacheProvider>
   );
