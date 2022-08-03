@@ -28,7 +28,7 @@ const Authors = () => {
               <Avatar
                 src={author.avatar.url}
                 alt={author.slug}
-                sx={{ marginLeft: 1 }}
+                sx={{ marginRight: 1 }}
               />
               <Typography
                 component="h6"

@@ -15,7 +15,6 @@ const AuthorPage = () => {
   });
   if (loading) return <Loader />;
   if (error) return <h3>Error</h3>;
-  console.log(data);
   const { author } = data;
   return (
     <Container maxWidth="lg">

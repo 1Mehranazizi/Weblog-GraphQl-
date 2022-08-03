@@ -10,6 +10,7 @@ import Header from "./layouts/Header";
 import HomePage from "./pages/HomePage";
 import AuthorPage from "./pages/AuthorPage";
 import BlogPage from "./pages/BlogPage";
+import ScrollToTop from "./helper/ScrollToTop";
 
 const cacheRtl = createCache({
   key: "muirtl",
@@ -20,6 +21,7 @@ function App() {
   return (
     <CacheProvider value={cacheRtl}>
       <ThemeProvider theme={theme}>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />

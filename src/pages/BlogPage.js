@@ -25,9 +25,11 @@ const BlogPage = () => {
         <Grid
           item
           xs={12}
-          display="flex"
-          alignItems="center"
-          justifyContent="space-between"
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
         >
           <Typography
             component="h2"
@@ -49,13 +51,13 @@ const BlogPage = () => {
             style={{ borderRadius: "20px" }}
           />
         </Grid>
-        <Grid item xs={12} display="flex" alignItems="center">
+        <Grid item xs={12} sx={{ display: "flex", alignItems: "center" }}>
           <Avatar
             src={post.author.avatar.url}
             alt={post.author.name}
             sx={{ width: 100, height: 100 }}
           />
-          <Box component="div" sx={{marginLeft: 2,}}>
+          <Box component="div" sx={{ marginLeft: 2 }}>
             <Typography component="p" variant="p">
               {post.author.name}
             </Typography>
@@ -72,7 +74,7 @@ const BlogPage = () => {
           ></div>
         </Grid>
         <Grid item xs={12}>
-            <CommentForm slug={post.slug} />
+          <CommentForm slug={post.slug} />
         </Grid>
         <Grid item xs={12}>
           <Comments slug={slug} />

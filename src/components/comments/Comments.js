@@ -11,7 +11,6 @@ const Comments = ({ slug }) => {
   if (loading) return null;
   if (error) return null;
   const { comments } = data;
-  console.log(data);
   return (
     <Grid
       container
@@ -38,8 +37,7 @@ const Comments = ({ slug }) => {
           padding={2}
           border="1px solid #ccc"
           borderRadius={5}
-          display="flex"
-          alginItems="center"
+          sx={{ display: "flex", alignItems: "center" }}
           mb={3}
         >
           <Avatar sx={{ marginRight: 2 }}>{comment.name[0]}</Avatar>
